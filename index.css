@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: hsl(230, 100%, 99%);
+  font-size: 15px;
+  color: hsl(225, 20%, 60%);
+}
+
+.label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.label {
+  position: absolute;
+  width: 46px;
+  height: 24px;
+  border: 2px solid;
+  border-radius: 20px;
+  background-color: hsl(223, 50%, 87%);
+  cursor: pointer;
+  right: 35px;
+  top: 20px;
+  transition: background-color 0.3s;
+}
+
+/* Toggle switch knob */
+.label:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  top: 2px;
+  left: 1.6px;
+  transition: all 0.3s;
+}
+
+.togg{
+    height: 10vh;
+    width: 100vw;
+    background-color: hsl(224, 65%, 95%);
+}
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  background-color: white;
+  margin: 1rem;
+  border-radius: 15px;
+  margin-top: -200px;
+}
+
+.title {
+  text-align: center;
+  padding: 70px 30px 300px;
+  background-color: hsl(224, 65%, 95%);
+  border-bottom-left-radius: 200px;
+  background-image: url(https://digitshack.com/codepen/mentor5/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center 40px;
+}
+
+/* .tt{
+  color: hsl(227, 35%, 25%);
+} */
+
+.title h1 {
+  color: hsl(227, 35%, 25%);
+  margin-bottom: 10px;
+}
+
+.tt{
+  font-size: 34px;
+}
+
+.top-content,
+.footer {
+  padding: 50px;
+}
+
+.packages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.packages .pv p {
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+}
+
+.cst {
+  display: flex;
+  align-items: center;
+}
+
+.cst p {
+  color: hsl(227, 35%, 25%);
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.cst p.time {
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 5px;
+  color: hsl(225, 20%, 60%);
+}
+
+input#price-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  height: 10px;
+  background: linear-gradient(
+    to right,
+    hsl(174, 77%, 80%) 0%,
+    hsl(174, 77%, 80%) 50%,
+    hsl(224, 65%, 95%) 0%,
+    hsl(224, 65%, 95%) 100%
+  );
+}
+
+input#price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: hsl(174, 86%, 45%);
+  background-image: url(https://digitshack.com/codepen/mentor5/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 7px 10px 4px rgba(16, 213, 194, 0.2);
+}
+
+input#price-slider::-webkit-slider-thumb:hover {
+  background-color: hsl(174, 77%, 80%);
+}
+
+.billing {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.billing p {
+  display: inline-block;
+  padding: 0 7px;
+}
+
+.billing p.discount {
+  color: hsl(15, 100%, 70%);
+  background-color: hsl(14, 92%, 95%);
+  font-size: 11px;
+  border-radius: 10px;
+}
+
+.switch input {
+  opacity: 0;
+}
+
+.switch {
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+  position: relative;
+}
+
+.toggle-slider {
+  position: absolute;
+  background-color: hsl(223, 50%, 87%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 25px;
+  transition: all 0.2s ease;
+}
+
+.toggle-slider:hover {
+  background-color: hsl(174, 86%, 45%);
+}
+
+.toggle-slider::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  left: 3px;
+  top: 3px;
+  transition: all 0.4s ease-in-out;
+}
+
+.switch input:checked + .toggle-slider:before {
+  transform: translateX(25px);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer a {
+  color: hsl(226, 100%, 87%);
+  background-color: hsl(227, 35%, 25%);
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.footer li {
+  margin-bottom: 7px;
+}
+
+.footer li img {
+  padding-right: 10px;
+}
+
+hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cst2 {
+  display: none;
+}
+
+p.discount2 {
+  display: none;
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    font-size: 12px;
+  }
+
+  .cst {
+    display: none;
+  }
+
+  .cst2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+  }
+
+  .packages {
+    flex-direction: column;
+  }
+
+  p.discount {
+    display: none;
+  }
+
+  p.discount2 {
+    display: inline-block;
+  }
+
+  .top-content,
+  .footer {
+    padding: 30px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer a {
+    margin-top: 20px;
+  }
+}
+/* Youtube link */
+.link {
+  position: fixed;
+  background-color: #d12322;
+  padding: 23px 40px;
+  right: -90px;
+  border-radius: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(-90deg);
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.1s ease-in-out;
+}
+
+.link i {
+  padding-left: 7px;
+}
+
+.link:hover {
+  text-decoration: underline;
+  background-color: black;
+}
+
+
+/* Dark theme styles */
+body.dark-theme {
+  background: hsl(230, 20%, 15%);
+  color: hsl(225, 20%, 90%);
+}
+
+body.dark-theme .tt{
+  /* background: hsl(230, 20%, 15%); */
+  /* color: hsl(225, 20%, 90%); */
+  font-size: 34px;
+}
+
+body.dark-theme .title {
+  background-color: hsl(224, 30%, 20%);
+  color: hsl(0, 0%, 100%);
+}
+
+body.dark-theme .tt{
+  color: #fff;
+}
+
+body.dark-theme .wrapper {
+  background-color: hsl(225, 20%, 25%);
+}
+
+body.dark-theme .cst p,
+body.dark-theme .cst2 p {
+  color: hsl(225, 20%, 90%);
+}
+
+body.dark-theme .toggle-slider {
+  background-color: hsl(223, 50%, 60%);
+}
+
+body.dark-theme .footer a {
+  color: hsl(225, 20%, 90%);
+  background-color: hsl(225, 25%, 35%);
+}
+
+body.dark-theme .footer a:hover {
+  color: hsl(230, 100%, 99%);
+}
+
+body.dark-theme input#price-slider {
+  background: linear-gradient(
+    to right,
+    hsl(174, 77%, 40%) 0%,
+    hsl(174, 77%, 40%) 50%,
+    hsl(230, 20%, 15%) 0%,
+    hsl(230, 20%, 15%) 100%
+  );
+}
+
+body.dark-theme input#price-slider::-webkit-slider-thumb {
+  background-color: hsl(174, 86%, 45%);
+}
+
+body.dark-mode .label {
+  background-color: hsl(174, 86%, 45%);
+}
+
+body.dark-mode .label:before {
+  background-color: white;
+  transform: translateX(22px); /* Move the toggle knob to the right */
+}
